@@ -5,7 +5,19 @@ module i2c_top (
     input wire reset_n,
     output wire [15:0] pass_led,
     inout wire sda,
-    inout wire scl   
+    inout wire scl,
+    output wire seg_a,
+    output wire seg_b,   
+    output wire seg_c,
+    output wire seg_d,
+    output wire seg_e,
+    output wire seg_f,
+    output wire seg_g,
+    output wire seg_dp,
+    output wire com0,
+    output wire com1,
+    output wire com2,
+    output wire com3
 );
 
 reg	ena, rw;
@@ -17,7 +29,7 @@ assign pass_led = {16{led_reg}};
 reg [19:0] init_count;
 reg get_started;
 reg [2:0] FSM_state = 0;
-reg [2:0] next_FSM_state;
+reg [2:0] next_FSM_state = 0;
 reg ena_next, rw_next;
 // transfer to wire port to module connection
 wire ena_wire;
@@ -31,6 +43,8 @@ assign data_wr_wire = data_to_write;
 
 wire busy, ack_error;
 wire [7:0]	data_rd;
+
+
 
 
 i2c_master i2c_master(
@@ -55,6 +69,29 @@ i2c_master i2c_master(
 I2CTest i2ctest(.CLCK(clk),
 				.SCL(scl),
 				.SDA(sda));
+
+
+seven_seg_display seven_seg_display(
+    .clk(clk),
+    .reset(reset_n),
+    .pass(led_reg),
+    .seg_a(seg_a),
+    .seg_b(seg_b),
+    .seg_c(seg_c),
+    .seg_d(seg_d),
+    .seg_e(seg_e),
+    .seg_f(seg_f),
+    .seg_g(seg_g),
+    .seg_dp(seg_dp),
+    .com0(com0),
+    .com1(com1),
+    .com2(com2),
+    .com3(com3)
+);
+
+
+
+
 
 
 // FSM
