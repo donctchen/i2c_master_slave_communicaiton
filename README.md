@@ -11,10 +11,14 @@
 
 ![alt text](post_imp_sim.png)
 ## 模組
-### 上層模組: i2c_top.v
-### Master IC: i2c_master.vhd
-### Slave IC: I2CTest.v
-### PASS顯示模組: seven_seg_display.v
+### 上層模組: 
+i2c_top.v
+### Master IC: 
+i2c_master.vhd
+### Slave IC: 
+I2CTest.v
+### PASS顯示模組: 
+seven_seg_display.v
 
 ## Testbench
 testbench.v
