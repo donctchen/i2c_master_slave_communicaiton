@@ -18,7 +18,7 @@ Basys3_Master.xdc
 
 
 ## 參考
-I2C Master module
-DigiKey I2C Master VHDL code
-https://forum.digikey.com/t/i2c-master-vhdl/12797
+### I2C Master module
+- DigiKey I2C Master VHDL code
+- https://forum.digikey.com/t/i2c-master-vhdl/12797
  
