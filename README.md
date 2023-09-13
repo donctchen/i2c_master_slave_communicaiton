@@ -6,7 +6,7 @@
 驗證讀取資料和寫入資料相同: 測試成功 
 點亮LED表示測試成功
 
-![alt text](第四題.jpg)
+![alt text](fpga.jpg)
 
 ![alt text](post_imp_sim.png)
 
