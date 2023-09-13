@@ -1,7 +1,7 @@
-# 實作I2C Master和Sleve溝通
+# 實作I2C Master和Slave溝通
 
 ## 實作內容
-使用I2C通訊方式<，實作Master和Sleve
+使用I2C通訊方式<，實作Master和Slave
 寫入資料後讀取資料
 驗證讀取資料和寫入資料相同: 測試成功 
 點亮LED表示測試成功
