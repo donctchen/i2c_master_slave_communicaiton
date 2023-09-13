@@ -1,4 +1,4 @@
-# 實作I2C Master和Slave溝通
+# FPGA實作I2C Master和Slave溝通
 
 ## 實作內容
 使用I2C通訊方式，實作Master和Slave <BR>
